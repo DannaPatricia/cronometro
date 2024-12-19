@@ -1,0 +1,82 @@
+* {
+    padding: 0px;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: rgb(65, 4, 65);
+    display: grid;
+    grid-template-rows: repeat(2, 35%);
+    height: 100vh;
+    width: 100vw;
+}
+
+#tituloContainer {
+    margin: auto;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #dfdddd;
+}
+
+#container {
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    margin: auto;
+    width: auto;
+    height: auto;
+    min-width: 30%;
+    min-height: 65%;
+    background-color: rgb(93, 34, 93);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 6px 6px 10px black;
+    overflow: hidden;
+    border: 5px rgb(128, 66, 128);
+    border-style: outset;
+}
+
+#pantallaContainer {
+    background-color: rgb(53, 66, 73);
+    border: 5px rgb(42, 51, 56);
+    border-style: inset;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
+    overflow: hidden;
+}
+
+#botonContainer {
+    margin: auto;
+    overflow: hidden;
+    height: 80px;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.btn {
+    width: 110px;
+    height: 65px;
+    font-size: 15px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(132, 10, 132);
+    border-color: #0e0e1d;
+    border-style: none;
+    box-shadow: 4px 4px 2px rgb(93, 8, 93);
+    margin:5px 15px;
+    transition: background-color 0.3s, translate 0.5s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(149, 13, 149);
+    box-shadow: 6px 6px 4px rgb(75, 5, 75);
+}
+
+.btn:active{
+    box-shadow: none;
+    translate: 4px 4px;
+}
