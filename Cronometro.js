@@ -26,17 +26,13 @@ let corriendo = false; // Para evitar múltiples temporizadores activos
 
 // Elementos del DOM
 const pantalla = document.querySelector("#pantallaContainer");
-const hora = document.querySelector("#horas");
-const min = document.querySelector("#minutos");
-const seg = document.querySelector("#segundos");
-const cent = document.querySelector("#centesimas");
 const valorBtn = document.querySelectorAll(".btn");
 
 valorBtn.forEach((boton) => {
     boton.addEventListener("click", () => {
         const botonDado = boton.textContent;
         if (botonDado === "RESET") {
-            resetCronometro();
+            reiniciarCronometro();
         } else if (botonDado === "START") {
             iniciarCronometro();
         } else if (botonDado === "STOP") {
@@ -57,7 +53,7 @@ function detenerCronometro() {
     clearInterval(idTemporizador);
 }
 
-function resetCronometro() {
+function reiniciarCronometro() {
     detenerCronometro();
     contador = 0;
     actualizarPantalla(); 
@@ -76,4 +72,4 @@ function formatear(numero) {
     return numero.toString().padStart(2, "0");
 }
 
-resetCronometro();
+reiniciarCronometro();
